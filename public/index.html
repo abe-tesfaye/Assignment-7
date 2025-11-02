@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  Name: Abraham Tesfaye
+  Date: 11.1.2025
+  CSC 372-01
+
+  This is the index.html page for my assignment 7. 
+  This webpage will store multiple jokes in a database and allow the user acces to them through thunderclient.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokebook</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Jokebook</h1>
+    <p class="muted">Random jokes. Browse by category. Add your own.</p>
+
+    <section class="card">
+      <h2>Random Joke</h2>
+      <p id="random-joke">Loading a random joke...</p>
+      <button class="btn" id="btn-random">New Random Joke</button>
+    </section>
+
+    <section class="card">
+      <h2>Categories</h2>
+      <div id="category-list">Loading categories...</div>
+    </section>
+
+    <section class="card">
+      <h2 id="cat-title">Jokes by Category</h2>
+      <div class="row">
+        <label for="limit-input" class="muted">Limit:</label>
+        <input id="limit-input" type="number" placeholder="e.g., 5">
+        <button class="btn" id="btn-load">Load</button>
+      </div>
+      <div id="jokes-container" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Add a Joke</h2>
+      <form id="add-form">
+        <input name="category" type="text" placeholder="Category" required>
+        <input name="setup" type="text" placeholder="Setup" required>
+        <input name="delivery" type="text" placeholder="Punchline" required>
+        <button class="btn primary" type="submit">Add Joke</button>
+      </form>
+      <p id="add-status" class="muted" style="margin-top:8px;"></p>
+    </section>
+
+    <footer class="muted" style="text-align:center">
+      Assignment 7 • Jokebook
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "name": "jokebook",
+    "version": "1.0.0",
+    "description": "Assignment 7 - Jokebook CRUD (Node, Express, PostgreSQL, MVC)",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "db:setup": "psql \"$DATABASE_URL\" -f sql/schema.sql",
+        "db:seed": "psql \"$DATABASE_URL\" -f sql/seed.sql"
+    },
+    "author": "Abraham Tesfaye",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.6.1",
+        "express": "^4.21.2",
+        "pg": "^8.16.3"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}
